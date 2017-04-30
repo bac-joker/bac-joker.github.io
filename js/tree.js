@@ -16,7 +16,7 @@ var imgName = {
 // 	'厉害，请收下我的膝盖', '美美哒', '美女一枚', '你又翻墙出外面玩了？', '生日快乐',
 // 	'生日快乐２', '树爷爷：你好重，快下来', '一对好姐妹', '中间那排，第三位同学请起来回答问题'
 // ];
-// let i3 = ['大海，绽放自由', '党的宗旨是一切为人民服务（所以我的外卖是不是可以交给你了？）', '钢琴老师好', '好惬意', '黄胖子! ! !',
+// var i3 = ['大海，绽放自由', '党的宗旨是一切为人民服务（所以我的外卖是不是可以交给你了？）', '钢琴老师好', '好惬意', '黄胖子! ! !',
 // 	'耶～', '举起手来', '来，看镜头', '美女，时隔一年，你又来了', '你应该面朝大海，来,在拍一次',
 // 	'傻乎乎', '哇，哪里？好想去', '哇哦，好好玩的样子', '我们来玩足球吧', '嘻嘻，久别重逢',
 // 	'耶，可爱的笑脸', '衣服和场合很搭调nice', '这是谁？认出有奖'
@@ -662,7 +662,7 @@ var Fireworks = function () {
 //　展示图片
 function showImg() {
 	if (imgName[1].length > 0) {
-		let name = imgName[1].shift();
+		var name = imgName[1].shift();
 		$(".show-content img").eq(0).attr('src', './img/1/' + name + '.png');
 		$(".show-content span").eq(0).text(name);
 
@@ -688,15 +688,15 @@ function showImg() {
 function showFireworks() {
 	var fworks = new Fireworks();
 	for (var i = 0; i < 50; ++i) {
-		let mx = Branch.random(0, window.innerWidth);
-		let my = Branch.random(0, 200);
+		var mx = Branch.random(0, window.innerWidth);
+		var my = Branch.random(0, 200);
 		fworks.createFireworks(fworks.cw / 2, fworks.ch, mx, my);
 	}
 	setInterval(function () {
 		var count = Branch.random(0, 8);
 		for (var i = 0; i < count; ++i) {
-			let mx = Branch.random(0, window.innerWidth);
-			let my = Branch.random(0, 200);
+			var mx = Branch.random(0, window.innerWidth);
+			var my = Branch.random(0, 200);
 			fworks.createFireworks(fworks.cw / 2, fworks.ch, mx, my);
 		}
 	}, 1000)
