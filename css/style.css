@@ -4,13 +4,77 @@
 }
 
 body {
-	margin: 0;
+	background: #1B1B1B;
+	transition: all 1.5s ease-in;
 	background-size: cover;
 }
 
 body,
 html {
 	height: 100%;
+}
+
+
+/*地图 */
+
+.content {
+	display: none;
+}
+
+
+/*map 文字样式*/
+
+#mapBlock {
+	position: absolute;
+	transition: all 1.5s ease-in;
+}
+
+.mapText {
+	position: absolute;
+	top: 60px;
+	left: 10%;
+	font-size: 23px;
+	color: rgba(226, 163, 29, 0.88);
+}
+
+.mapText span {
+	display: inline-block;
+	width: 24px;
+}
+
+.mapText .leftText {
+	animation: lFontText 2s ease-in-out;
+}
+
+.mapText .rightText {
+	transform: translate(5px, 30px);
+	animation: rFontText 1.5s ease-out;
+}
+
+@keyframes lFontText {
+	0% {
+		transform: translateY(-15px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes rFontText {
+	0% {
+		transform: translate(5px, 45px);
+	}
+	100% {
+		transform: translate(5px, 30px);
+	}
+}
+
+.mapRotate {
+	transform: rotateX(-90deg);
+}
+
+.changeBackground {
+	background: rgba(179, 176, 162, 0.83);
 }
 
 #canvas {
